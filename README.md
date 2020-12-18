@@ -1,2 +1,2 @@
-# Group-Project-Wrecking-ball
-Group Project C22-34
+# p5.play-boilerplate
+Boiler plate for p5.play
