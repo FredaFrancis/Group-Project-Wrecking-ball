@@ -11,10 +11,11 @@ function setup() {
   engine = Engine.create();
   world=engine.world
   ground1=new Ground(600,height,1200,40)
-  ball=new Ball(650,250,80)
+  ball=new Ball(650,250,40)
   box1=new Box(780,560,70,70)
 
  rope=new Rope(ball.body,{x:650,y:0})
+ Engine.run(engine);
 }
 
 function draw() {
@@ -24,4 +25,7 @@ function draw() {
   ball.display()
   box1.display()
   rope.display()
+}
+function mouseDragged() {
+  Matter.Body.setPosition(ball.body, { x: mouseX, y: mouseY });
 }
