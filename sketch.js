@@ -1,7 +1,7 @@
 const Bodies=Matter.Bodies
 const Engine=Matter.Engine
 const World=Matter.World
-
+const Constraint=Matter.Constraint
 var ground1
 
 var world,engine
@@ -11,12 +11,17 @@ function setup() {
   engine = Engine.create();
   world=engine.world
   ground1=new Ground(600,height,1200,40)
+  ball=new Ball(650,250,80)
+  box1=new Box(780,560,70,70)
+
+ rope=new Rope(ball.body,{x:650,y:0})
 }
 
 function draw() {
   background(255,255,255);
   Engine.update(engine)  
- ground1.display();
-
-
+  ground1.display();
+  ball.display()
+  box1.display()
+  rope.display()
 }
