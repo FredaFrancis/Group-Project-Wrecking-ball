@@ -3,8 +3,7 @@ class Ball{
 	{
 		var options={
 			isStatic:false,
-			restitution:0.1,
-			friction:0.1,
+            frictionAir: 0.005,
 			density:2
 
 			
